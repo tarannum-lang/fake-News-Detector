@@ -35,6 +35,3 @@ To use the app, follow these steps:
 - Analysis of the sentiment of the input text
 - User-friendly GUI for easy interaction with the app
 
-## Acknowledgments
-- The dataset used for training the machine learning model can be found at: https://github.com/lutzhamel/fake-news.
-
