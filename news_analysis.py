@@ -93,7 +93,7 @@ def get_analyzation_result(clf, vectorizer, article):
 
 
 def get_text_file_content(file_path):
-    with open(file_path, "r") as file:
+    with open(file_path, "r", encoding="utf-8") as file:
         return file.read()
 
 
@@ -111,7 +111,7 @@ def get_trained_model():
         vectorizer, clf = pickle.load(f)
         f.close()
         return vectorizer, clf
-    except (OSError, IOError):
+    except (OSError, IOError, EOFError, pickle.UnpicklingError):
         f = open("my_classifier.pickle", "wb")
 
         vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
@@ -135,7 +135,7 @@ def get_trained_model():
 
 def save_result_in_file(article_text, article_sentiment, real_or_fake, accuracy):
     result = f"{accuracy}% {real_or_fake}"
-    with open("output.txt", "w") as f:
+    with open("output.txt", "w", encoding="utf-8") as f:
         f.write(f"Article text: {article_text}\n")
         f.write(f"Article sentiment: {article_sentiment}\n")
         f.write(f"Real or fake: {real_or_fake}\n")

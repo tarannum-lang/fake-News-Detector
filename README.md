@@ -11,8 +11,11 @@ To use this app, you will need to install the following python dependencies:
 - nltk
 - pandas
 - PySide6
-- scikit_learn
+- PySide6-Addons
+- PySide6-Essentials
+- scikit-learn
 - vaderSentiment
+- pyqtdarktheme
 
 They can be installed by executing the following command in your terminal:
 ```
