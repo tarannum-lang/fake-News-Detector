@@ -16,6 +16,7 @@ To use this app, you will need to install the following python dependencies:
 - scikit-learn
 - vaderSentiment
 - pyqtdarktheme
+- streamlit
 
 They can be installed by executing the following command in your terminal:
 ```
@@ -29,6 +30,12 @@ To use the app, follow these steps:
 2. Click the button with label "Select Article Text File" to select a text file to analyse.
 3. Click the "Analyse" button to analyse the selected file.
 4. The results of the analysis will be displayed in the GUI.
+
+### Streamlit Web App
+To use the modern web interface:
+1. Run the command: `python -m streamlit run streamlit_app.py`
+2. The app will open in your default browser.
+3. Upload a text file and click "Analyse Article".
 
 ## Features
 - Classification of input text as either "fake" or "real" news

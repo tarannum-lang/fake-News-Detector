@@ -6,3 +6,4 @@ PySide6-Essentials
 scikit-learn
 vaderSentiment
 pyqtdarktheme
+streamlit
